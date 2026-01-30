@@ -44,7 +44,7 @@ MyVariableName = "Ain"
 my_variable_name = "Ain"
 
 #ex assign multiple values
-x, y, z = "Grape", "Apple", "Lemon"
+x, y, z = "Grape", "Apple", "Jeruk"
 print(x)
 print(y)
 print(z)
