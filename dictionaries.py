@@ -1,0 +1,279 @@
+#dictionaries :cara 1
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict)
+#cara 2
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+#cara 3
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964,
+  "year": 2020
+}
+print(thisdict)
+#cara 4
+print(len(thisdict))
+#cara 5
+thisdict = {
+  "brand": "Ford",
+  "electric": False,
+  "year": 1964,
+  "colors": ["red", "white", "blue"]
+}
+#cara 6
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(type(thisdict))
+#cara 7
+thisdict = dict(name = "John", age = 36, country = "Norway")
+print(thisdict)
+
+
+#acces_dictionary_items :cara 1
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = thisdict["model"]
+#cara 2
+x = thisdict.get("model")
+#cara 3
+x = thisdict.keys()
+#cara 4
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+x = car.keys()
+
+print(x) #before the change
+
+car["color"] = "white"
+
+print(x) #after the change
+#cara 5
+x = thisdict.values()
+#cara 6
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+x = car.values()
+
+print(x) #before the change
+
+car["year"] = 2020
+
+print(x) #after the change
+#cara 7
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+x = car.values()
+
+print(x) #before the change
+
+car["color"] = "red"
+
+print(x) #after the change
+#cara 8
+x = thisdict.items()
+#cara 9
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+x = car.items()
+
+print(x) #before the change
+
+car["year"] = 2020
+
+print(x) #after the change
+#cara 10
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+x = car.items()
+
+print(x) #before the change
+
+car["color"] = "red"
+
+print(x) #after the change
+#cara 11
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+if "model" in thisdict:
+  print("Yes, 'model' is one of the keys in the thisdict dictionary")
+
+#change_dictionary_items :cara 1
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict["year"] = 2018
+#cara 2
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.update({"year": 2020})
+
+#ads_dictionary_items :cara 1
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict["color"] = "red"
+print(thisdict)
+#cara 2
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.update({"color": "red"})
+
+#remove_dictionary_items :cara 1
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.pop("model")
+print(thisdict)
+#cara 2
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.popitem()
+print(thisdict)
+#cara 3
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+del thisdict["model"]
+print(thisdict)
+#cara 4
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.clear()
+print(thisdict)
+
+#loop_dictionaries :cara 1
+for x in thisdict:
+  print(x)
+#cara 2
+for x in thisdict:
+  print(thisdict[x])
+#cara 3
+for x in thisdict.values():
+  print(x)
+#cara 4
+for x in thisdict.keys():
+  print(x)
+#cara 5
+for x, y in thisdict.items():
+  print(x, y)
+
+#copy_dictionaries :cara 1
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = thisdict.copy()
+print(mydict)
+#cara 2
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = dict(thisdict)
+print(mydict)
+
+#nested_dictionaries
+myfamily = {
+  "child1" : {
+    "name" : "Emil",
+    "year" : 2004
+  },
+  "child2" : {
+    "name" : "Tobias",
+    "year" : 2007
+  },
+  "child3" : {
+    "name" : "Linus",
+    "year" : 2011
+  }
+}
+#cara 2
+child1 = {
+  "name" : "Emil",
+  "year" : 2004
+}
+child2 = {
+  "name" : "Tobias",
+  "year" : 2007
+}
+child3 = {
+  "name" : "Linus",
+  "year" : 2011
+}
+
+myfamily = {
+  "child1" : child1,
+  "child2" : child2,
+  "child3" : child3
+}
+#cara 3
+print(myfamily["child2"]["name"])
+#cara 4
+for x, obj in myfamily.items():
+  print(x)
+
+  for y in obj:
+    print(y + ':', obj[y])
+
+#dictionary_methods
+#dictionary_exercises
